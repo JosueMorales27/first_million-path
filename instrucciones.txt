@@ -1,0 +1,74 @@
+Here's an example code in JavaScript that calculates the amount of money you have available after saving 80% and dividing the remaining 20% among different expenses:
+
+javascript
+Copy code
+// Define variables
+let totalIncome = 0;
+let savingsPercentage = 0.8;
+let remainingPercentage = 0.2;
+let foodExpense = 0;
+let phoneExpense = 0;
+let transportationExpense = 0;
+let debtExpense = 0;
+let savingsExpense = 0;
+
+// Function to get input from the user
+function getInput() {
+  totalIncome = parseFloat(prompt("Enter your total income:"));
+}
+
+// Function to calculate expenses
+function calculateExpenses() {
+  const savings = totalIncome * savingsPercentage;
+  const remainingAmount = totalIncome - savings;
+  foodExpense = remainingAmount * 0.2;
+  phoneExpense = remainingAmount * 0.2;
+  transportationExpense = remainingAmount * 0.3;
+  debtExpense = remainingAmount * 0.2;
+  savingsExpense = remainingAmount * 0.1;
+}
+
+// Function to output results
+function outputResults() {
+  console.log(`You have $${totalIncome.toFixed(2)} in total income.`);
+  console.log(`You saved $${(totalIncome * savingsPercentage).toFixed(2)} (${savingsPercentage * 100}%).`);
+  console.log(`You have $${(totalIncome * remainingPercentage).toFixed(2)} remaining to spend on expenses.`);
+  console.log(`Food expense: $${foodExpense.toFixed(2)} (${(foodExpense / remainingPercentage) * 100}% of remaining).`);
+  console.log(`Phone expense: $${phoneExpense.toFixed(2)} (${(phoneExpense / remainingPercentage) * 100}% of remaining).`);
+  console.log(`Transportation expense: $${transportationExpense.toFixed(2)} (${(transportationExpense / remainingPercentage) * 100}% of remaining).`);
+  console.log(`Debt expense: $${debtExpense.toFixed(2)} (${(debtExpense / remainingPercentage) * 100}% of remaining).`);
+  console.log(`Savings expense: $${savingsExpense.toFixed(2)} (${(savingsExpense / remainingPercentage) * 100}% of remaining).`);
+}
+
+// Main function
+function main() {
+  getInput();
+  calculateExpenses();
+  outputResults();
+}
+
+// Call the main function
+main();
+In this example code, the getInput function prompts the user to enter their total income. The calculateExpenses function calculates the amount of money to save (80% of total income) and the remaining amount to spend on expenses (20% of total income). The remaining amount is then divided among different expense categories using percentages. Finally, the outputResults function outputs the total income, the amount saved, and the amount spent on each expense category.
+
+You can modify this code to suit your specific needs by changing the percentage allocations for each expense category or adding additional expense categories.
+
+
+
+
+josue morales
+how do i run that program 
+To run the JavaScript program, you need to save the code in a file with a .js extension, for example, budget.js. You can then run the program in the following ways:
+
+Run the program in a web browser console:
+
+Open a web browser such as Chrome, Firefox, or Safari.
+Press Ctrl+Shift+J (Windows/Linux) or Cmd+Opt+J (macOS) to open the console.
+Navigate to the directory where the budget.js file is saved.
+Type node budget.js in the console and press enter. The program will run and output the results in the console.
+Run the program in a JavaScript runtime environment such as Node.js:
+
+Install Node.js from the official website: https://nodejs.org/en/download/
+Open a terminal or command prompt and navigate to the directory where the budget.js file is saved.
+Type node budget.js and press enter. The program will run and output the results in the terminal.
+Once you run the program, you will be prompted to enter your total income. After entering your income, the program will output the amount saved (80% of total income) and the amount spent on different expense categories (20% of total income divided among food, phone, transportation, debt, and savings).
